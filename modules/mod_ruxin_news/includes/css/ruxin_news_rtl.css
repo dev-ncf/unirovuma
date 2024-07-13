@@ -1,0 +1,55 @@
+/**--------------------------------------
+ * @package     ruxin_news - Ruxin News
+ * @copyright   Copyright (C) 2019 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later.
+ * ---------------------------------------**/
+.ruxin-news-col-1, .ruxin-news-col-2, .ruxin-news-col-3, .ruxin-news-col-4, .ruxin-news-col-5, .ruxin-news-col-6, .ruxin-news-col-7, .ruxin-news-col-8 {
+    float: right;
+}
+
+.ruxin_news .news-leading, .ruxin_news .news-intro, .ruxin_news .news-link {
+    float: right;
+}
+
+.ruxin_news .lead_category_top, .ruxin_news .intro_category_top, .ruxin_news .link_category_top {
+	left: auto;
+	right: 5px;
+}
+
+.ruxin_news.news-block-15 .news_on_image, .ruxin_news.news-block-16 .news_on_image, .ruxin_news.news-block-21 .news_on_image {
+	left: auto;
+	right: 5%;
+}
+
+.ruxin_news .lead_date, .ruxin_news .intro_date, .ruxin_news .link_date, .ruxin_news .lead_hits, .ruxin_news .intro_hits, .ruxin_news .link_hits, .ruxin_news .lead_auhor, .ruxin_news .intro_auhor, .ruxin_news .link_auhor {
+	padding-right: 0;
+	padding-left: 5px;
+}
+
+.ruxin_news_heading2 .news_module_title > ::before {
+    left: auto !important;
+	right: 10px;
+}
+
+.ruxin_news_heading3 .news_module_title span, .ruxin_news_heading3 .news_module_title a {
+    padding: 0 0 0 10px;
+}
+
+.ruxin_news .lead_category_top::before, .ruxin_news .intro_category_top::before, .ruxin_news .link_category_top::before {
+    left: auto;
+	right: 0;
+    border-right: 0;
+	border-left: 5px solid transparent;
+}
+
+.ruxin-slider .owl-prev {
+	float: right;
+}
+
+.ruxin-slider .owl-next {
+	float: left;
+}
+
+.ruxin_load_more_section button {
+	background-size: 100% 0%;
+}

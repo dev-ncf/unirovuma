@@ -1,0 +1,34 @@
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item > a, .sp-megamenu-parent .sp-dropdown li.sp-menu-item span:not(.sp-menu-badge) {
+    width: 90%;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #f1f1f1;
+}
+.sp-megamenu-parent .sp-mega-group > li > a {
+    color: #0089ff;
+}
+.sp-megamenu-parent .sp-dropdown .sp-module .sp-module-title {
+
+    color: #ff9c07;
+}
+.offcanvas-menu .offcanvas-inner .sp-module ul > li a, .offcanvas-menu .offcanvas-inner .sp-module ul > li span {
+    color: #252525;
+    /* width: 90%; */
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #f1f1f1;
+}
+.offcanvas-menu .offcanvas-inner .sp-module ul > li.menu-parent > a > .menu-toggler, .offcanvas-menu .offcanvas-inner .sp-module ul > li.menu-parent > .menu-separator > .menu-toggler {
+    color: rgba(0, 137, 255, 0.68);}
+#sp-header {
+    background: #fff;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.43) 0%, rgba(149, 149, 149, 0.28) 100%);}
+
+.sp-megamenu-parent > li > a, .sp-megamenu-parent > li > span {
+    display: inline-block;
+    padding: 0 15px 0 15px;
+    border-right: 1px solid #dbdbdb;}
+.sp-megamenu-parent > li.active > a, .sp-megamenu-parent > li.active:hover > a {
+    color: #00aeef;
+    background-color: #ffffff70;
+}

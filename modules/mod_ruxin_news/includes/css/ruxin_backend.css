@@ -1,0 +1,146 @@
+#jform_params_block_chzn .block, #jform_params_block_chzn .result-selected, #jform_params_block_chzn .active-result {
+	padding: 10px !important;
+	position: relative;
+}
+
+.form-horizontal .control-label .spacer hr {
+    border: 2px solid #000;
+}
+
+.form-horizontal label b {
+    font-size: 18px;
+}
+
+.block::after{
+	float: right;
+	position: absolute;
+	padding: 0 10px;
+	top: 4px;
+	right: 0;
+}
+
+
+.block1::after{
+	content: url('icons/block1.png');
+}
+
+.block2::after{
+	content: url('icons/block2.png');
+}
+
+.block3::after{
+	content: url('icons/block3.png');
+}
+
+.block4::after{
+	content: url('icons/block4.png');
+}
+
+.block5::after{
+	content: url('icons/block5.png');
+}
+
+.block6::after{
+	content: url('icons/block6.png');
+}
+
+.block7::after{
+	content: url('icons/block7.png');
+}
+
+.block8::after{
+	content: url('icons/block8.png');
+}
+
+.block9::after{
+	content: url('icons/block9.png');
+}
+
+.block10::after{
+	content: url('icons/block10.png');
+}
+
+.block11::after{
+	content: url('icons/block11.png');
+}
+
+.block12::after{
+	content: url('icons/block12.png');
+}
+
+.block13::after{
+	content: url('icons/block13.png');
+}
+
+.block14::after{
+	content: url('icons/block14.png');
+}
+
+.block15::after{
+	content: url('icons/block15.png');
+}
+
+.block16::after{
+	content: url('icons/block16.png');
+}
+
+.block17::after{
+	content: url('icons/block17.png');
+}
+
+.block18::after{
+	content: url('icons/block18.png');
+}
+
+.block19::after{
+	content: url('icons/block19.png');
+}
+
+.block20::after{
+	content: url('icons/block20.png');
+}
+
+.block21::after{
+	content: url('icons/block21.png');
+}
+
+.block22::after{
+	content: url('icons/block22.png');
+}
+
+.block23::after{
+	content: url('icons/block23.png');
+}
+
+.block24::after{
+	content: url('icons/block24.png');
+}
+
+.block25::after{
+	content: url('icons/block25.png');
+}
+
+.block26::after{
+	content: url('icons/block26.png');
+}
+
+.block27::after{
+	content: url('icons/block27.png');
+}
+
+.block28::after{
+	content: url('icons/block28.png');
+}
+
+.block29::after{
+	content: url('icons/block29.png');
+}
+
+.block30::after{
+	content: url('icons/block30.png');
+}
+
+.block31::after{
+	content: url('icons/block31.png');
+}
+

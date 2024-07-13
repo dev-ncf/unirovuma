@@ -1,0 +1,1235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0" client="site" method="upgrade">
+    <name>Ruxin News</name>
+    <author>Ruxincode</author>
+    <creationDate>2019</creationDate>
+    <copyright>Copyright (C) 2019 . All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later;</license>
+    <authorEmail>ruxincode@gmail.com</authorEmail>
+    <authorUrl>www.ruxincode.com</authorUrl>
+    <version>2.2</version>
+    <description>Awesome News Module For Joomla!</description>
+    <files>
+        <filename module="mod_ruxin_news">mod_ruxin_news.php</filename>
+        <folder>classes</folder>
+        <folder>includes</folder>
+        <folder>tmpl</folder>
+        <filename>helper.php</filename>
+    </files>
+
+    <config>
+        <fields name="params" class="conditional">
+            <fieldset name="basic">
+			
+				<field type="spacer" label="&lt;b&gt;Heading&lt;/b&gt;"/>
+				<field
+                        name="show_heading"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="0"
+                        label="Show Heading"
+                        description=""
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field
+					name="heading_text"
+					type="text"
+					label="Heading Text"
+					description=""
+					showon="show_heading:1"
+				/>
+				
+				<field
+					name="heading_link"
+					type="text"
+					label="Heading Link"
+					description=""
+					showon="show_heading:1"
+				/>
+				
+				<field
+                        name="heading_style"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="1"
+                        label="Heading Style"
+                        description=""
+						showon="show_heading:1"
+                >
+                    <option value="1">Style 1</option>
+					<option value="2">Style 2</option>
+					<option value="3">Style 3</option>
+					<option value="4">Style 4</option>
+					<option value="5">Style 5</option>
+					<option value="6">Style 6</option>
+                </field>
+				
+				<field
+					name="heading_font_size"
+					type="text"
+					label="Heading Font Size"
+					description=""
+					default="14"
+					showon="show_heading:1"
+				/>
+				
+				<field
+					name="heading_text_color"
+					type="color"
+					label="Heading Text Color"
+					description=""
+					default="#ffffff"
+					showon="show_heading:1"
+				/>
+				
+				<field
+					name="heading_background_color"
+					type="color"
+					label="Heading Background Color"
+					default="#000000"
+					showon="show_heading:1"
+				/>
+				
+				<field
+					name="heading_margin_bottom"
+					type="text"
+					label="Heading Margin Bottom"
+					default="15"
+					showon="show_heading:1"
+				/>
+				
+				<field type="spacer" name="spacer1" hr="true" />
+				<field type="spacer" label="&lt;b&gt;Global Setting&lt;/b&gt;"/>
+				
+				<field
+                        name="block"
+                        type="list"
+                        default="1"
+                        label="Select Block"
+                        description=""
+                >
+                    <option value="block-custom">Custom</option>
+                    <option class="block block1" value="1">Block 1</option>
+                    <option class="block block2" value="2">Block 2</option>
+					<option class="block block3" value="3">Block 3</option>
+					<option class="block block4" value="4">Block 4</option>
+					<option class="block block5" value="5">Block 5</option>
+					<option class="block block6" value="6">Block 6</option>
+					<option class="block block7" value="7">Block 7</option>
+					<option class="block block8" value="8">Block 8</option>
+					<option class="block block9" value="9">Block 9</option>
+					<option class="block block10" value="10">Block 10</option>
+					<option class="block block11" value="11">Block 11</option>
+					<option class="block block12" value="12">Block 12</option>
+					<option class="block block13" value="13">Block 13</option>
+					<option class="block block14" value="14">Block 14</option>
+					<option class="block block15" value="15">Block 15</option>
+					<option class="block block16" value="16">Block 16</option>
+					<option class="block block17" value="17">Block 17</option>
+					<option class="block block18" value="18">Block 18</option>
+					<option class="block block19" value="19">Block 19</option>
+					<option class="block block20" value="20">Block 20</option>
+					<option class="block block21" value="21">Block 21</option>
+					<option class="block block22" value="22">Block 22</option>
+					<option class="block block23" value="23">Block 23</option>
+					<option class="block block24" value="24">Block 24</option>
+					<option class="block block25" value="25">Block 25</option>
+					<option class="block block26" value="26">Block 26</option>
+					<option class="block block27" value="27">Block 27</option>
+					<option class="block block28" value="28">Block 28</option>
+					<option class="block block29" value="29">Block 29</option>
+					<option class="block block30" value="30">Block 30</option>
+					<option class="block block31" value="31">Block 31</option>
+                </field>
+				
+				<field
+                        name="show_dots"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="1"
+                        label="Show Dots"
+                        description=""
+						showon="block:29"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field
+                        name="show_nav"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="1"
+                        label="Show Nav"
+                        description=""
+						showon="block:29"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field
+                        name="autoplay"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="1"
+                        label="AutoPlay"
+                        description=""
+						showon="block:29"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field
+					name="duration"
+					type="text"
+					label="Autoplay Duration"
+					default="4000"
+					description=""
+					showon="block:29"
+				/>
+				
+				<field
+                        name="pause_on_hover"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="1"
+                        label="Pause on Hover"
+                        description=""
+						showon="block:29"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field
+					name="gap"
+					type="text"
+					label="Gap Between Columns"
+					default="3"
+					description="Between 0 - 20"
+					showon="block:block-custom"
+				/>
+				
+				<field
+                        name="image_hover_effect"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="news_hover_effect_on"
+                        label="Images Hover Effect"
+                        description=""
+						showon="block!:29"
+                >
+                    <option value="news_hover_effect_on">JYES</option>
+                    <option value="news_hover_effect_off">JNO</option>
+                </field>
+				
+				<field
+                        name="black_background"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="0"
+                        label="Black Background"
+                        description="Black Background Color Under Module"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field
+                        name="show_load_more"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="0"
+                        label="Show Load More Button"
+                        description=""
+						showon="block!:29"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field
+                        name="load_more_type"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="next_prev"
+                        label="Load More Type"
+                        description=""
+						showon="show_load_more:1"
+                >
+                    <option value="load_more">Load More</option>
+                    <option value="next_prev">Next - Prev</option>
+                </field>
+				
+				<field
+					name="load_more_text"
+					type="text"
+					label="Load More Text"
+					default="Load More"
+					description=""
+					showon="show_load_more:1[AND]load_more_type:load_more"
+				/>
+				
+				<field
+					name="no_more_text"
+					type="text"
+					label="No More Articles Text"
+					default="No More Articles"
+					description=""
+					showon="show_load_more:1[AND]load_more_type:load_more"
+				/>
+				
+				<field
+					name="load_more_next_text"
+					type="text"
+					label="Next Button Text"
+					default="Next"
+					description=""
+					showon="show_load_more:1[AND]load_more_type:next_prev"
+				/>
+				
+				<field
+					name="load_more_prev_text"
+					type="text"
+					label="Prev Button Text"
+					default="Prev"
+					description=""
+					showon="show_load_more:1[AND]load_more_type:next_prev"
+				/>
+				
+				<field type="spacer" name="spacer2" hr="true" />
+				<field type="spacer" label="&lt;b&gt;Source Setting&lt;/b&gt;"/>
+				
+                <field
+                        name="image_source"
+                        type="list"
+                        default="auto"
+                        label="Image Source"
+                        description=""
+                >
+                    <option value="intro_image">Intro Image</option>
+                    <option value="fulltext">Full Text</option>
+                    <option value="auto">Auto</option>
+                </field>
+                <field name="source" type="list" default="joomla_category" label="Source From" class="source_field"
+                       description="">
+                    <option value="category">Joomla</option>
+                    <option value="k2_category">K2</option>
+                </field>
+                <field name="catid" show_root="true" type="category" class="source_category"
+                       extension="com_content" multiple="true" size="10" label="Joomla Categories"
+                       description=""/>
+                <field name="k2_category" type="k2multicategories" class="source_k2_category"
+                       default="" size="10" multiple="multiple" label="K2 Categories"
+                       description=""/>
+                <field
+                        name="start_from"
+                        type="text"
+                        default="0"
+                        label="Start From"
+                        description=""/>
+
+                <field
+                        name="day_filter"
+                        type="text"
+                        default="0"
+                        label="Time Range"
+                        description=""/>
+
+                <field
+                        name="show_featured"
+                        type="list"
+                        default=""
+                        label="Show Featured"
+                        description=""
+                >
+                    <option value="">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                    <option value="1">Only Show Featured</option>
+                </field>
+
+                <field
+                        name="ordering"
+                        type="list"
+                        default="created-desc"
+                        label="Order"
+                        description="">
+                    <option value="id-asc">By ID ASC</option>
+                    <option value="id-desc">By ID Desc</option>
+                    <option value="hits-asc">Least viewed first</option>
+                    <option value="hits-desc">Most viewed first</option>
+                    <option value="created-asc">Created - ASC</option>
+                    <option value="created-desc">Created - DESC</option>
+                    <option value="publish_up-asc">Published - ASC</option>
+                    <option value="publish_up-desc">Published - DESC</option>
+                    <option value="featured-asc">Featured - ASC</option>
+					<option value="featured-desc" showon="source:category">Featured - DESC</option>
+                    <option value="rand-">Random</option>
+                </field>
+
+                <field
+                        name="user_id"
+                        type="list"
+                        default="0"
+                        label="Authors"
+                        description=""
+                >
+                    <option value="0">Anyone</option>
+                    <option value="by_me">Added or modified by me</option>
+                    <option value="not_me">Not added or modified by me</option>
+                </field>
+				
+				<field type="spacer" name="spacer3" hr="true" />
+				<field type="spacer" label="&lt;b&gt;Leading&lt;/b&gt;"/>
+				
+				<field
+                        name="lead_text_type"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="news_on_image"
+                        label="Text Type"
+                        description=""
+						showon="block:block-custom"
+                >
+                    <option value="news_normal">Normal</option>
+                    <option value="news_on_image">On Image</option>
+                </field>
+				
+				<field
+                        name="lead_image_align"
+                        type="radio"
+						class="btn-group btn-group-yesno"
+                        default="none"
+                        label="Image Align"
+                        description=""
+						showon="block:block-custom[AND]lead_text_type:news_normal"
+                >
+                    <option value="left">Left</option>
+                    <option value="none">Center</option>
+                    <option value="right">Right</option>
+
+                </field>
+                
+				
+				<field
+                        name="lead_text_center"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="0"
+                        label="Text Center"
+                        description=""
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="lead_width"
+                        type="text"
+                        default="100%"
+                        label="Leading Width"
+                        description=""
+						showon="block:block-custom"/>
+                <field
+                        name="lead_count"
+                        type="text"
+                        default="0"
+                        label="Count"
+                        description="The number of Articles to display (the default is 5)."
+						showon="block:block-custom"/>
+
+                <field
+                        name="lead_column"
+                        type="text"
+                        default="1"
+                        label="Number of Column"
+                        description="Set Number of Columns for This Section"
+						showon="block:block-custom"/>
+                <field
+                        name="show_lead_thumbnail"
+                        class="radio btn-group"
+                        type="radio"
+                        default="1"
+                        label="Show Thumbnail"
+                        description="Show Thumbnail for This Section"
+						showon="block:block-custom">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="lead_thumbnail_width"
+                        type="text"
+                        default="600"
+                        label="Thumbnail Width"
+                        description="Thumbnail Width for This Section"
+						showon="block:block-custom"/>
+
+                <field
+                        name="lead_thumbnail_height"
+                        type="text"
+                        default="400"
+                        label="Thumbnail Height"
+                        description="Thumbnail Height for This Section"
+						showon="block:block-custom"/>
+
+                <field
+                        name="show_lead_title"
+                        class="radio btn-group"
+                        type="radio"
+                        default="1"
+                        label="Show Title"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="lead_title_limit"
+                        type="text"
+                        default="120"
+                        label="Character Limit"
+						showon="show_lead_title:1"
+                />
+
+                <field
+                        name="lead_title_size"
+                        type="text"
+                        default="18"
+                        label="Font Size"
+						showon="show_lead_title:1"
+                />
+
+                <field
+                        name="lead_title_weight"
+                        type="text"
+                        default="400"
+                        label="Font Weight"
+						showon="show_lead_title:1"
+                />
+				
+				<field
+                        name="leading_show_field"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Extra Field"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field
+                        name="leading_field_position"
+                        class="radio btn-group"
+                        type="radio"
+                        default="before_title"
+                        label="Field Position"
+						showon="leading_show_field:1"
+                >
+                    <option value="before_title">Before Title</option>
+                    <option value="after_title">After Title</option>
+                </field>
+				
+				<field
+					name="leading_field_number"
+					type="text"
+					default="0"
+					label="Field Number"
+					description=""
+					showon="leading_show_field:1"
+				/>
+				
+				<field
+					name="leading_field_character_limit"
+					type="text"
+					default="80"
+					label="Character Limit"
+					description=""
+					showon="leading_show_field:1"
+				/>
+				
+				<field
+					name="leading_field_text"
+					type="text"
+					label="Text Before Field"
+					description=""
+					showon="leading_show_field:1"
+				/>
+				
+                <field
+                        name="show_lead_introtext"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Intro Text"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="lead_introtext_limit"
+                        type="text"
+                        default="120"
+                        label="Character Limit"
+						showon="show_lead_introtext:1"
+                />
+
+                <field
+                        name="show_lead_cat"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Category">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field
+                        name="lead_cat_top"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Category Position"
+						showon="show_lead_cat:1">
+                    <option value="0">Before Title</option>
+                    <option value="1">Top of Image</option>
+                </field>
+				
+				<field
+                        name="lead_category_color"
+                        type="color"
+                        default="#ffffff"
+                        label="Category Text Color"
+						showon="show_lead_cat:1"
+                />
+				
+				<field
+                        name="lead_category_background"
+                        type="color"
+                        default="#ec0000"
+                        label="Category Background Color"
+						showon="show_lead_cat:1"
+                />
+
+                <field
+                        name="show_lead_date"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Date">
+                    <option value="0">JNO</option>
+                    <option value="LC1">DATE_FORMAT_LC1</option>
+                    <option value="LC2">DATE_FORMAT_LC2</option>
+                    <option value="LC3">DATE_FORMAT_LC3</option>
+                    <option value="LC4">DATE_FORMAT_LC4</option>
+                </field>
+
+                <field
+                        name="show_lead_hits"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Hits">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="show_lead_author"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Author">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field type="spacer" name="spacer4" hr="true" />
+				<field type="spacer" label="&lt;b&gt;Intro&lt;/b&gt;"/>
+				
+				<field
+                        name="intro_text_type"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="news_on_image"
+                        label="Text Type"
+                        description=""
+						showon="block:block-custom"
+                >
+                    <option value="news_normal">Normal</option>
+                    <option value="news_on_image">On Image</option>
+                </field>
+				
+				<field
+                        name="intro_image_align"
+                        type="radio"
+						class="btn-group btn-group-yesno"
+                        default="none"
+                        label="Image Align"
+                        description=""
+						showon="block:block-custom[AND]intro_text_type:news_normal"
+                >
+                    <option value="left">Left</option>
+                    <option value="none">Center</option>
+                    <option value="right">Right</option>
+
+                </field>
+                
+				
+				<field
+                        name="intro_text_center"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="0"
+                        label="Text Center"
+                        description=""
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+                <field
+                        name="intro_width"
+                        type="text"
+                        default="100%"
+                        label="Intro Width"
+                        description=""
+						showon="block:block-custom"/>
+                <field
+                        name="intro_count"
+                        type="text"
+                        default="0"
+                        label="Count"
+                        description="The number of Articles to display (the default is 5)."
+						showon="block:block-custom"/>
+
+                <field
+                        name="intro_column"
+                        type="text"
+                        default="1"
+                        label="Number of Column"
+                        description="Set Number of Columns for This Section"
+						showon="block:block-custom"/>
+
+                <field
+                        name="show_intro_thumbnail"
+                        class="radio btn-group"
+                        type="radio"
+                        default="1"
+                        label="Show Thumbnail"
+                        description="Show Thumbnail for This Section"
+						showon="block:block-custom">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="intro_thumbnail_width"
+                        type="text"
+                        default="600"
+                        label="Thumbnail Width"
+                        description="Thumbnail Width for This Section"
+						showon="block:block-custom"/>
+
+                <field
+                        name="intro_thumbnail_height"
+                        type="text"
+                        default="400"
+                        label="Thumbnail Height"
+                        description="Thumbnail Height for This Section"
+						showon="block:block-custom"/>
+
+                <field
+                        name="show_intro_title"
+                        class="radio btn-group"
+                        type="radio"
+                        default="1"
+                        label="Show Title"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="intro_title_limit"
+                        type="text"
+                        default="120"
+                        label="Character Limit"
+                />
+
+                <field
+                        name="intro_title_size"
+                        type="text"
+                        default="18"
+                        label="Font Size"
+                />
+
+                <field
+                        name="intro_title_weight"
+                        type="text"
+                        default="400"
+                        label="Font Weight"
+                />
+				
+				<field
+                        name="intro_show_field"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Extra Field"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field
+                        name="intro_field_position"
+                        class="radio btn-group"
+                        type="radio"
+                        default="before_title"
+                        label="Field Position"
+						showon="intro_show_field:1"
+                >
+                    <option value="before_title">Before Title</option>
+                    <option value="after_title">After Title</option>
+                </field>
+				
+				<field
+					name="intro_field_number"
+					type="text"
+					default="0"
+					label="Field Number"
+					description=""
+					showon="intro_show_field:1"
+				/>
+				
+				<field
+					name="intro_field_character_limit"
+					type="text"
+					default="80"
+					label="Character Limit"
+					description=""
+					showon="intro_show_field:1"
+				/>
+				
+				<field
+					name="intro_field_text"
+					type="text"
+					label="Text Before Field"
+					description=""
+					showon="intro_show_field:1"
+				/>
+
+                <field
+                        name="show_intro_introtext"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Intro Text"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="intro_introtext_limit"
+                        type="text"
+                        default="120"
+                        label="Character Limit"
+						showon="show_intro_introtext:1"
+                />
+
+                <field
+                        name="show_intro_cat"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Category">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field
+                        name="intro_cat_top"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Category Position"
+						showon="show_intro_cat:1">
+                    <option value="0">Before Title</option>
+                    <option value="1">Top of Image</option>
+                </field>
+				
+				<field
+                        name="intro_category_color"
+                        type="color"
+                        default="#ffffff"
+                        label="Category Text Color"
+						showon="show_intro_cat:1"
+                />
+				
+				<field
+                        name="intro_category_background"
+                        type="color"
+                        default="#ec0000"
+                        label="Category Background Color"
+						showon="show_intro_cat:1"
+                />
+
+                <field
+                        name="show_intro_date"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Date">
+                    <option value="0">JNO</option>
+                    <option value="LC1">DATE_FORMAT_LC1</option>
+                    <option value="LC2">DATE_FORMAT_LC2</option>
+                    <option value="LC3">DATE_FORMAT_LC3</option>
+                    <option value="LC4">DATE_FORMAT_LC4</option>
+                </field>
+
+                <field
+                        name="show_intro_hits"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Hits">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="show_intro_author"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Author">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field type="spacer" name="spacer5" hr="true" />
+				<field type="spacer" label="&lt;b&gt;Link&lt;/b&gt;"/>
+				
+				<field
+                        name="link_text_type"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="news_on_image"
+                        label="Text Type"
+                        description=""
+						showon="block:block-custom"
+                >
+                    <option value="news_normal">Normal</option>
+                    <option value="news_on_image">On Image</option>
+                </field>
+				
+				<field
+                        name="link_image_align"
+                        type="radio"
+						class="btn-group btn-group-yesno"
+                        default="none"
+                        label="Image Align"
+                        description=""
+						showon="block:block-custom[AND]link_text_type:news_normal"
+                >
+                    <option value="left">Left</option>
+                    <option value="none">Center</option>
+                    <option value="right">Right</option>
+
+                </field>
+                
+				
+				<field
+                        name="link_text_center"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default="0"
+                        label="Text Center"
+                        description=""
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+                <field
+                        name="link_width"
+                        type="text"
+                        default="100%"
+                        label="Link Width"
+                        description=""
+						showon="block:block-custom"/>
+                <field
+                        name="link_count"
+                        type="text"
+                        default="0"
+                        label="Count"
+                        description="The number of Articles to display (the default is 5)."
+						showon="block:block-custom"/>
+
+                <field
+                        name="link_column"
+                        type="text"
+                        default="1"
+                        label="Number of Column"
+                        description="Set Number of Columns for This Section"
+						showon="block:block-custom"/>
+                <field
+                        name="show_link_thumbnail"
+                        class="radio btn-group"
+                        type="radio"
+                        default="1"
+                        label="Show Thumbnail"
+                        description="Show Thumbnail for This Section"
+						showon="block:block-custom">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="link_thumbnail_width"
+                        type="text"
+                        default="600"
+                        label="Thumbnail Width"
+                        description="Thumbnail Width for This Section"
+						showon="block:block-custom"/>
+
+                <field
+                        name="link_thumbnail_height"
+                        type="text"
+                        default="400"
+                        label="Thumbnail Height"
+                        description="Thumbnail Height for This Section"
+						showon="block:block-custom"/>
+
+                <field
+                        name="show_link_title"
+                        class="radio btn-group"
+                        type="radio"
+                        default="1"
+                        label="Show Title"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="link_title_limit"
+                        type="text"
+                        default="120"
+                        label="Character Limit"
+                />
+
+                <field
+                        name="link_title_size"
+                        type="text"
+                        default="18"
+                        label="Font Size"
+                />
+
+                <field
+                        name="link_title_weight"
+                        type="text"
+                        default="400"
+                        label="Font Weight"
+                />
+				
+				<field
+                        name="link_show_field"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Extra Field"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field
+                        name="link_field_position"
+                        class="radio btn-group"
+                        type="radio"
+                        default="before_title"
+                        label="Field Position"
+						showon="link_show_field:1"
+                >
+                    <option value="before_title">Before Title</option>
+                    <option value="after_title">After Title</option>
+                </field>
+				
+				<field
+					name="link_field_number"
+					type="text"
+					default="0"
+					label="Field Number"
+					description=""
+					showon="link_show_field:1"
+				/>
+				
+				<field
+					name="link_field_character_limit"
+					type="text"
+					default="80"
+					label="Character Limit"
+					description=""
+					showon="link_show_field:1"
+				/>
+				
+				<field
+					name="link_field_text"
+					type="text"
+					label="Text Before Field"
+					description=""
+					showon="link_show_field:1"
+				/>
+
+                <field
+                        name="show_link_introtext"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Intro Text"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="link_introtext_limit"
+                        type="text"
+                        default="120"
+                        label="Character Limit"
+						showon="show_link_introtext:1"
+						
+                />
+
+                <field
+                        name="show_link_cat"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Category">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				
+				<field
+                        name="link_cat_top"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Category Position"
+						showon="show_link_cat:1">
+                    <option value="0">Before Title</option>
+                    <option value="1">Top of Image</option>
+                </field>
+				
+				<field
+                        name="link_category_color"
+                        type="color"
+                        default="#ffffff"
+                        label="Category Text Color"
+						showon="show_link_cat:1"
+                />
+				
+				<field
+                        name="link_category_background"
+                        type="color"
+                        default="#ec0000"
+                        label="Category Background Color"
+						showon="show_link_cat:1"
+                />
+
+                <field
+                        name="show_link_date"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Date">
+                    <option value="0">JNO</option>
+                    <option value="LC1">DATE_FORMAT_LC1</option>
+                    <option value="LC2">DATE_FORMAT_LC2</option>
+                    <option value="LC3">DATE_FORMAT_LC3</option>
+                    <option value="LC4">DATE_FORMAT_LC4</option>
+                </field>
+
+                <field
+                        name="show_link_hits"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Hits">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="show_link_author"
+                        class="radio btn-group"
+                        type="radio"
+                        default="0"
+                        label="Show Author">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea" rows="3"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="1"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC"
+                >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                        name="cache_time"
+                        type="text"
+                        default="900"
+                        label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                        description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+
+                <field
+                        name="cachemode"
+                        type="hidden"
+                        default="static"
+                >
+                    <option value="static"></option>
+                </field>
+				<field addfieldpath="/modules/mod_ruxin_news/includes" type="asset" name="asset"
+                       path="modules/mod_ruxin_news/includes/"/>
+            </fieldset>
+
+
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" name="ruxin_news" priority="1">
+            http://www.ruxincode.com/update/ruxin_news.xml
+        </server>
+    </updateservers>
+</extension>
